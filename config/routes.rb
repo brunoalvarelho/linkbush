@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root "static#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_for :users, path: "authentication/user", controllers: {
+      sessions: "authentication/user/sessions",
+      passwords: "authentication/user/passwords",
+      registrations: "authentication/user/registrations"
+    }
 end
