@@ -1,0 +1,33 @@
+<h1 class="text-center mb-4 font-weight-bold">Log in to your LinkBush</h1>
+<div class="form-group">
+    <%= simple_form_for resource,
+                    as: resource_name,
+                    url: session_path(resource_name),
+                    defaults: { label: false, wrapper_html: { class: "mb-2" } } do |f| %>
+        <div class="d-flex flex-column">
+            <%= f.input :user_name,
+                    autofocus: true,
+                    required: true,
+                    wrapper_html: { class: "col-sm-3 mb-2 mx-auto"},
+                    input_html: {class: "bg-secondary bg-opacity-25"},
+                    placeholder: "linkbush.io/...username" %>
+            <%= f.input :password,
+                    required: true,
+                    wrapper_html: { class: "col-sm-3 mb-2 mx-auto"},
+                    input_html: {class: "bg-secondary bg-opacity-25"},
+                    placeholder: "password" %>
+        </div>
+
+        <div class="d-grid gap-2 col-3 mx-auto mt-2">
+            <%= button_tag "Log in",
+                            class: "btn btn-secondary rounded-pill",
+                            type: "submit" %>
+        </div>
+    <% end %>
+</div>
+
+<%= link_to "Forgot password?", new_user_password_path(resource), class: "d-flex justify-content-center mt-4 mb-0 link-success" %>
+
+<p class="text-center mt-4 mb-0"> Don't have a Linktree account?
+    <%= link_to "Create One", new_user_registration_path, class: "link-success" %>
+</p>

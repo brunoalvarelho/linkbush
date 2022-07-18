@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+  
+  .home {
+    color: rgb(210, 232, 35);
+    line-height: 1.05;
+  }
+
+  #title-home {
+    word-spacing: 0.1em;
+    font-weight: 800;
+  }

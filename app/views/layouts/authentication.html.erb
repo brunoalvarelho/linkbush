@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<style>
+  @media (max-width: 992px){
+    .only-laptop {
+      display: none;
+    }
+  }
+
+</style>
 <html>
   <head>
     <title>Linkbush 🍀</title>
@@ -14,13 +22,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   
   <body>
-    <div class="row">
-        <div class="col-8"><%= yield %></div>
-        <div class="col-4"><%= image_tag "image.jpg", class: "img-fluid",  alt: "Responsive image"%></div>
+    <div class="container-fuild">
+        <div class="row">
+          <div class="col-12 col-lg-9 mt-5"><%= yield %></div>
+          <div class="col-lg-3 only-laptop"><%= image_tag "image.jpeg", class: "img-fluid", alt: "Responsive image"%></div>
+        </div>
     </div>
   </body>
 </html>
