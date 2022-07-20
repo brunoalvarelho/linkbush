@@ -15,12 +15,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
   <body>
-    <div class="row justify-content-center">
-      <nav class="navbar navbar-expand-lg bg-light col-9 rounded-pill">
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg bg-light col-9 rounded-pill">
         <div class="container-fluid">
           <a class="navbar-brand mb-0 h1 text-dark" href="#">LinkBush 🍀</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,12 +35,17 @@
           </div>
         </div>
       </nav>
-    </div>
+
+      <div class="alert">
+        <p class="notice d-none"><%= notice %></p>
+        <p class="alert d-none"><%= alert %></p>
+      </div>
+    </header>
 
     <%= yield %>
 
     <div class="footer row justify-content-center">
-      <footer class="col-9 bg-light rounded">
+      <footer class="col-9 bg-light rounded m-5">
         <div class="social_media d-flex justify-content-center pt-4 mb-3">
           <i class="fa-brands fa-instagram fa-2xl me-3"></i>   
           <i class="fa-brands fa-snapchat fa-2xl me-3"></i>          

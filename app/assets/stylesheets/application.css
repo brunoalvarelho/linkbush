@@ -14,12 +14,24 @@
  *= require_self
  */
   
-  .home {
-    color: rgb(210, 232, 35);
-    line-height: 1.05;
-  }
+ header {
+  background-color: rgb(37, 79, 26);
+ }
 
-  #title-home {
-    word-spacing: 0.1em;
-    font-weight: 800;
-  }
+.first {
+  background-color: rgb(37, 79, 26);
+  color: rgb(210, 232, 35);
+  line-height: 1.05;
+  word-spacing: 0.1em;
+  font-weight: 800;
+}
+
+.second {
+  background-color: rgb(233, 192, 233);
+  color: rgb(80, 34, 16);
+  line-height: 1.05;
+}
+
+.footer {
+  background-color: rgb(120, 0, 22);
+}
